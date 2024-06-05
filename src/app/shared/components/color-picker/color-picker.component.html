@@ -1,0 +1,14 @@
+<div class="color-picker">
+  <app-color-palette
+    [selectedColorFromSlider]="selectedColorFromSlider"
+    (selectedColor)="listenColorFromPalette($event)"
+  ></app-color-palette>
+  <app-color-slider (selectedColor)="listenColorFromSlider($event)"></app-color-slider>
+</div>
+<div class="input">
+  <span class="text">{{finalColor}}</span>
+  <div
+    class="color-div"
+    [ngStyle]="{'background-color': finalColor || 'white'}"
+  ></div>
+</div>
